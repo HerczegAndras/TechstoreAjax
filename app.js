@@ -58,23 +58,25 @@ function kiiras() {
                 }
 
                 
-                if (termek.reviews && Array.isArray(termek.reviews)) {
-                    let velemenyekHTML = "";
-                    
-                    termek.reviews.forEach(review => {
-                        velemenyekHTML += `
-                            <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs space-y-1">
-                                <div class="flex justify-between font-semibold text-slate-800">
-                                    <span>${review.user}</span>
-                                </div>
-                                <div class="text-amber-400">★ ★ ★ ★ ★</div>
-                                <p class="text-slate-600">${review.comment}</p>
-                            </div>
-                        `;
-                    });
-                    
-                    document.getElementById("velemenyek-lista").innerHTML = velemenyekHTML;
-                }
+               
+if (termek.reviews && Array.isArray(termek.reviews)) {
+    let velemenyekHTML = "";
+    
+    termek.reviews.forEach(review => {
+        velemenyekHTML += `
+            <div class="bg-slate-50 p-3 rounded-lg border border-slate-100 text-xs space-y-1">
+                <div class="flex justify-between items-center font-semibold text-slate-800">
+                    <span>${review.user}</span>
+                    <span class="text-[10px] text-slate-400 font-normal">${review.date || ""}</span>
+                </div>
+                <div class="text-amber-400">★ ★ ★ ★ ★</div>
+                <p class="text-slate-600">${review.comment}</p>
+            </div>
+        `;
+    });
+    
+    document.getElementById("velemenyek-lista").innerHTML = velemenyekHTML;
+}
 
                
                 if (typeof lucide !== 'undefined') {

@@ -27,11 +27,13 @@
   "reviews": [
     {
       "user": "Kovács Péter",
-      "comment": "Nagyon gyors gép!"
+      "comment": "Nagyon gyors gép!",
+      "date":"2024.11.02"
     },
     {
       "user": "Nagy Anna",
-      "comment": "Minden játék maximális beállításokkal fut."
+      "comment": "Minden játék maximális beállításokkal fut.",
+      "date":"2024.11.02"
     }
   ]
 }
